@@ -3,6 +3,7 @@ use clap::Parser;
 use std::path::PathBuf;
 
 mod day01;
+mod day02;
 mod helper;
 
 #[derive(Debug, Parser)]
@@ -59,6 +60,7 @@ fn main() {
 
     let (part1, part2) = matcher! { &args,
         1 => day01,
+        2 => day02,
     };
 
     match (args.trim, part1, part2) {
