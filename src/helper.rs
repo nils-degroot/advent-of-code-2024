@@ -30,3 +30,26 @@ macro_rules! count_tts {
         count_tts!( $( $a )* ) << 1
     };
 }
+
+#[derive(Debug, Clone)]
+pub struct Grid<S> {
+    inner: Vec<Vec<S>>,
+}
+
+impl<S> Grid<S> {
+    pub fn inner(&self) -> &[Vec<S>] {
+        &self.inner
+    }
+
+    pub fn inner_mut(&mut self) -> &mut Vec<Vec<S>> {
+        &mut self.inner
+    }
+}
+
+impl From<String> for Grid<char> {
+    fn from(value: String) -> Self {
+        Grid {
+            inner: value.lines().map(|line| line.chars().collect()).collect(),
+        }
+    }
+}
