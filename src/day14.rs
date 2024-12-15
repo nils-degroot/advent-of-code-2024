@@ -1,5 +1,3 @@
-use std::collections::HashSet;
-
 fn parse_input(input: &str) -> Vec<((i64, i64), (i64, i64))> {
     input
         .lines()
