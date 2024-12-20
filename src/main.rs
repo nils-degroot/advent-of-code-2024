@@ -21,6 +21,7 @@ mod day16;
 mod day17;
 mod day18;
 mod day19;
+mod day20;
 mod helper;
 
 #[derive(Debug, Parser)]
@@ -95,6 +96,7 @@ fn main() {
         17 => day17,
         18 => day18,
         19 => day19,
+        20 => day20,
     };
 
     match (args.trim, part1, part2) {
